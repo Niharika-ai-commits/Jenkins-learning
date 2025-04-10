@@ -11,8 +11,8 @@ pipeline {
         always { 
             echo 'I will always say Hello again!'
         }
-        sucess {
-            echo  'I will say hello when it is sucess'
+        success {
+            echo  'I will say hello when it is success'
         }
         failure {
             echo  'I will not say hello when it is failure'
