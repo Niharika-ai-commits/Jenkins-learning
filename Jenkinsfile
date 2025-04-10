@@ -5,12 +5,14 @@ pipeline {
     options {
         timeout(time: 10, unit: 'SECONDS')
         disableConcurrentBuilds()
+        retry()
     }
     stages {
         stage('Example') {
             steps {
                 echo 'Hello World'
-                sleep(10)
+                error 'pipeline failed'
+                
             
             }
         }
