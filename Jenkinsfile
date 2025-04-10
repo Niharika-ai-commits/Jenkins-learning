@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage('Example') {
             steps {
-                echo 'Hello World'
+                echo 'Hello World
+                error pipeline failed'
             }
         }
     }
@@ -15,7 +16,7 @@ pipeline {
             echo  'I will say hello when it is success'
         }
         failure {
-            echo  'I will not say hello when it is failure'
+            echo  'I will say hello when it is failure'
         }
     }
 }
