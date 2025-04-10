@@ -6,7 +6,7 @@ pipeline {
         stage('Example') {
             steps {
                 echo 'Hello World'
-                error 'pipeline failed'
+            
             }
         }
     }
