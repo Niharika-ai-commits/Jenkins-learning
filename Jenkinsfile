@@ -11,3 +11,9 @@ pipeline {
         }
     }
 }
+
+options{
+    always{
+        echo "I will always say hello"
+    }
+}
