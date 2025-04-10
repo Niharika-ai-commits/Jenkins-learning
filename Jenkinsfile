@@ -6,7 +6,7 @@ pipeline {
         timeout(time: 10, unit: 'SECONDS')
         disableConcurrentBuilds()
         // retry()
-        parameters {
+    parameters {
         string(name: 'Greeting', defaultValue: 'Hello', description: 'How should I greet the world?')
     }
     }
@@ -14,7 +14,7 @@ pipeline {
         stage('Example') {
             steps {
                 echo 'Hello World'
-                error 'pipeline failed'
+                // error 'pipeline failed'
                 // sleep(10)
         
         stage('Example') {
