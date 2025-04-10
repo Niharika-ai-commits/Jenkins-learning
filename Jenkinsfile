@@ -1,20 +1,15 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
+        stage('Example') {
             steps {
-                sh "echo This is build"
-            }
-        }
-        stage('Test') {
-            steps {
-                sh "echo This is test"
-            }
-        }
-        stage('Deploy') {
-            steps {
-                sh "echo This is deploy"
+                echo 'Hello World'
             }
         }
     }
-    
+    post { 
+        always { 
+            echo 'I will always say Hello again!'
+        }
+    }
+}
