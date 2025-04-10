@@ -16,10 +16,9 @@ pipeline {
                 echo 'Hello World'
                 // error 'pipeline failed'
                 // sleep(10)
-        
-        stage('Example') {
-            steps {
-                echo "${params.Greeting} World!"
+            stage('Example') {
+                steps {
+                    echo "${params.Greeting} World!"
             }
         }    
             }
