@@ -5,15 +5,23 @@ pipeline {
     options {
         timeout(time: 10, unit: 'SECONDS')
         disableConcurrentBuilds()
-        retry()
+        // retry()
+        parameters {
+        string(name: 'Greeting', defaultValue: 'Hello', description: 'How should I greet the world?')
+    }
     }
     stages {
         stage('Example') {
             steps {
                 echo 'Hello World'
                 error 'pipeline failed'
-                
-            
+                // sleep(10)
+        
+        stage('Example') {
+            steps {
+                echo "${params.Greeting} World!"
+            }
+        }    
             }
         }
     }
