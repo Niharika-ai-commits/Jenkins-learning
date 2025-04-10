@@ -3,8 +3,8 @@ pipeline {
     stages {
         stage('Example') {
             steps {
-                echo 'Hello World
-                error pipeline failed'
+                echo 'Hello World'
+                error 'pipeline failed'
             }
         }
     }
